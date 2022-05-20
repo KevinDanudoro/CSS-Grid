@@ -1,0 +1,37 @@
+/* 
+1. line-names : memberikan nama pada grid line
+
+cara penulisan -> grid-template-columns: [line-start] 100px [line-end] ....
+artinya        -> Buat 1 kolom yang nama grid line di kiri dan kanannya dengan "line-start" dan "line-end"
+
+
+2. fr : satuan yang digunakan pada grid untuk menentukan lebar dan tinggi cell.
+   fr mirip seperti flex-grow yang mana saat memberi nilai 2fr maka akan 2 kali ukuran 1fr.
+   Istimewanya dia akan relatif ukuran container
+
+*/
+
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue ;
+}
+
+.item:nth-child(2n){
+  background-color: lightcoral;
+}
+
+.container{
+  width: 70%;
+  height: 400px;
+  margin: 50px auto;
+  display: grid;
+
+  /* perubahan dapat dilihat di inspect element untuk line-name nya*/
+  grid-template-columns: [awal] 1fr 2fr 3fr [akhir];
+  /* Untuk satuan fr, kolom2 akan 2x kolom1 dan kolom3 akan 3x kolom1 relatif terhadap parentnya */
+  
+
+  grid-auto-rows: 40px;
+}

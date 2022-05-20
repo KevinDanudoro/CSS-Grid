@@ -1,0 +1,49 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 80%;
+  height: 90vh;
+  margin: 30px auto;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 0.3fr;
+  
+  /* Berfungsi mengatur area pada tiap cell */
+  /* Baris-n -> "kolom1 kolom2 kolom3" */
+  grid-template-areas: 
+    "header header header"
+    "sidebar content content"
+    "sidebar content content"
+    "footer footer footer";
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.header{
+  grid-area: header;
+  background-color: lightgreen;
+}
+.sidebar{
+  grid-area: sidebar;
+  background-color: rgb(241, 241, 122);
+}
+.content{
+  grid-area: content;
+  background-color: lightcoral;
+}
+.footer{
+  grid-area: footer;
+  background-color: lightslategray;
+}

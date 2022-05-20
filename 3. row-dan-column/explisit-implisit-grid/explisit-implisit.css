@@ -1,0 +1,62 @@
+/* 
+- Explisit grid berarti kolom / baris pada grid yang telah didefinisikan oleh programer.
+  (didefinisikan menggunakan properties grid-template-columns dan grid-template-rows)
+
+- Implisit grid berarti kolom / baris pada grid yang tidak didefinisikan oleh programer.
+  (Terjadi jika jumlah elemen lebih banyak dari total jumlah cell yang disediakan grid)
+
+
+1. Untuk membedakan mana yang explisit grid dengan implisit grid maka lakukan inspect element, 
+  lalu tekan tombol grid pada container dengan display grid. (Gunakan Mozilla FireFox)
+
+  _____ : garis solid melambangkan explisit grid
+  ----- : garis putus2 melambangkan cell/item yang telah diatur oleh explisit grid
+  ..... : titik2 melambangkan implisit grid 
+
+
+2. Pertanyaan selanjutnya. Bagaimana cara mengatur baris dan kolom yang implisit?
+   Gunakan properties: 
+   - grid-auto-columns
+   - grid-auto-rows
+
+3. Secara default, jika ada elemen pada grid yang mengalami overflow maka akan dialihkan ke baris baru
+   Untuk mengatur ke arah mana flow dilakukan, gunakan grid-auto-flow
+
+*/
+
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue ;
+}
+
+.item:nth-child(2n){
+  background-color: lightcoral;
+}
+
+.container{
+  width: 600px;
+  height: 400px;
+  margin: 50px auto;
+  display: grid;
+
+  /* Dari sini kita bisa tahu bahwa terdapat 2 kolom x 3 baris yang eksplisit */
+  grid-template-columns: 25% auto;
+  grid-template-rows: 50px 100px auto;
+
+  /* Seluruh baris implisit atur tinggi cellnya menjadi 40px */
+  grid-auto-rows: 40px;
+
+
+  /* "grid-auto-flow: column" -> Atur flow grid dari kolom ke baris */
+  /* 
+  flow grid akan dimulai dari baris 1 ke baris 2 dst sampai baris eksplisit terakhir, 
+  kemudian saat terjadi overflow akan dialihkan ke kolom baru
+  */
+  grid-auto-flow: column;
+
+
+  /* Seluruh kolom implisit atur lebar cellnya menjadi 100px */
+  grid-auto-columns: 100px;
+}

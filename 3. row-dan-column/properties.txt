@@ -1,0 +1,31 @@
+CSS Grid Properties
+
+A. Container 
+
+- grid-template-columns                 - justify-items
+- grid-template-rows                    - align-items
+- grid-auto-columns                     - place-items 
+- grid-auto-rows                        - justify-content 
+- grid-auto-flows                       - align-content
+- grid-template-areas                   - place-content
+- grid-template
+- grid-column-gap
+- grid-row-gap
+- grid-gap
+- grid
+
+
+B. Items
+
+- grid-column-start         - justify-self
+- grid-column-end           - align-self
+- grid-row-start            - place-self
+- grid-row-end
+- grid-column
+- grid-row
+- grid-area
+
+Belajar Grid
+
+https://roadmap.sh/frontend
+https://cssgridgarden.com/

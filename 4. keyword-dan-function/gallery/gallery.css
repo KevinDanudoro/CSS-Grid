@@ -1,0 +1,39 @@
+*{
+  padding: 0;
+  margin: 0;
+  /* line-height: 0; */
+}
+body{
+  background-color: #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h2{
+  text-align: center;
+  font-size: 40px;
+}
+
+.gallery{
+  /* min-width dan minmax("min", ) harus sama agar border container tidak rusak saat layar kecil */
+  min-width: 200px;
+  max-width: 80vw;
+  margin: 50px auto 0;
+  border: 10px solid white;
+
+  display: grid;  
+
+  /* Cara agar tampilan gallery dapat penuh oleh beberapa gambar */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  /* Memberi gap / ruang antara cell pada grid */
+  grid-gap: 5px;
+}
+
+ul li{
+  list-style-type: none;
+}
+li img{
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,9 @@
+
+Terdapat banyak instilah yang digunakan pada css grid, diantaranya adalah:
+1. Grid container   : Elemen pembungkus grid, didefinisikan dengan menuliskan "display: grid"
+2. Grid item        : Elemen elemen yang berada 1 level di dalam grid container
+3. Grid line        : Garis horizontal / vertikal yang memisahkan grid menjadi beberapa bagian dan ditandai dengan angka
+4. Grid cell        : Perpotongan antara baris dan kolom di dalam grid (membentuk 1 kotak yang dapat diisi elemen)
+5. Grid area        : Kumpulan lebih dari 1 cell yang dikelompokkan dan dapat membentuk kotak
+6. Grid track       : Ukuran / jarak antara 2 grid line, bisa horizontal / vertikal (memperbesar ukuran cell)
+7. Grid gap         : Jarak antara cell (seperti memberi margin antara elemen html sehingga lebih renggang)

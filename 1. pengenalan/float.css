@@ -1,0 +1,88 @@
+/* 
+1. Grid merupakan nilai dari display pada css yang berfungsi mirip seperti flex.
+
+2. Perbedaan Grid dan Flex terletak pada kemampuan mengatur layout yang mana grid dapat mengatur 
+  letak elemen secara horizontal dan vertikal bersamaan, sedangkan flex hanya dapat mengatur 1 tata 
+  letak dalam satu waktu
+
+3. Cara menggunakan grid adalah dengan memberi display: grid pada parent dari elemen yang ingin di atur
+
+*/
+
+/* Latihan menggunakan float terlebih dahulu */
+*{
+  margin: 0;
+  padding: 0;
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+h1{
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+.container{
+  width: 90%;
+  border: 8px solid black;
+  padding: 10px;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+.header{
+  height: 100px;
+  line-height: 100px;
+  background-color: rgb(199, 18, 199);
+}
+
+.container-main{
+  height: 500px;
+}
+
+.container-main .sub-main{
+  width: 45%;
+  height: 100%;
+
+  float: left;
+}
+.sub-main .aside{
+  height: 30%;
+  line-height: calc(500px * 30/100);
+  background-color: blue;
+}
+.sub-main .nav{
+  height: 70%;
+  line-height: calc(500px * 70/100);
+  background-color: red;
+}
+.container-main .main{
+  float: left;
+  height: 100%;
+  width: 55%;
+  background-color: rgb(223, 148, 51);
+  
+  /* 
+  Pake padding juga bisa untuk meletakkan elemen di tengah parent
+  padding: calc(height-parrent / 2) 0;
+  */
+
+  padding: 250px 0;
+  box-sizing: border-box;
+}
+.footer{
+  height: 80px;
+  background-color: gray;
+  line-height: 80px;
+}

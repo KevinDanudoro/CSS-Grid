@@ -1,0 +1,40 @@
+/* 
+"min-content" merupakan value unuk menentukan ukuran cell dengan mengesuaikan ukuran konten 
+di dalamnya. Ukuran konten di dalamny akan diusahakan selalu "minimal".
+
+Sedangkan
+
+"max-content" merupakan value unuk menentukan ukuran cell dengan mengesuaikan ukuran konten 
+di dalamnya. Ukuran konten di dalamny akan diusahakan selalu "maxsimal".
+*/
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue ;
+}
+
+.item:nth-child(2n){
+  background-color: lightcoral;
+}
+
+.container{
+  width: 60%;
+  height: 50vh;
+
+  /* Cara menengahkan elemen */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* atur display container menjadi grid */
+  display: grid;
+
+  /* 
+  minmax akan berusaha agar ukuran elemen tetap 400px. Namun saat sudah tidak muat maka
+  ukuran elemen akan berkurang sampai minimal 200px
+  */
+  grid-template-columns: 1fr minmax(200px, 400px) 1fr;
+
+}

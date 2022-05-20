@@ -1,0 +1,28 @@
+/* "repeat()" Menentukan ukuran grid track secara berulang dengan nilai yang sama */
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue ;
+}
+
+.item:nth-child(2n){
+  background-color: lightcoral;
+}
+
+.container{
+  width: 600px;
+  height: 50vh;
+
+  /* Cara menengahkan elemen */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* atur display container menjadi grid */
+  display: grid;
+
+  /* atur lebar kolom 1-4 sebesar 1fr dan 5-9 sebesar 1.5fr */
+  grid-template-columns: repeat(4, 1fr) repeat(5, 1.5fr);
+}

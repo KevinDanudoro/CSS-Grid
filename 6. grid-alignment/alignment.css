@@ -1,0 +1,111 @@
+/* 
+1. justify-items: mensejajarkan grid-items pada sumbu horizontal
+2. align-items: mensejajarkan grid-items pada sumbu horizontal
+
+*/
+
+h1{
+  text-align: center;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 50vw;
+  height: 200px;
+  margin: 10px auto 150px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  background-color: aliceblue;
+  gap: 5px;
+}
+
+.item{
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 30px;
+  border: 3px solid black;
+}
+
+/* Justify Items */
+/* default akan memenuhi lebar grid kolomnya */
+.ji-stretch{
+  justify-items: stretch;
+}
+.ji-start{
+  justify-items: start;
+}
+.ji-end{
+  justify-items: end;
+}
+.ji-center{
+  justify-items: center;
+}
+
+
+/* Align Items */
+/* default akan memenuhi tinggi grid kolomnya */
+.ai-stretch{
+  align-items: stretch;
+}
+.ai-start{
+  align-items: start;
+}
+.ai-end{
+  align-items: end;
+}
+.ai-center{
+  align-items: center;
+}
+
+/* shorthand penulisan justify-items dan align-items */
+/* 
+place-items: <align-items> <justify-items>;
+*/
+
+
+
+/* Justify Content */
+/* 
+Mengatur posisi seluruh cell pada grid secara horizontal jika ukuran seluruh cell tersebut 
+lebih kecil dari container pembungkusnya 
+*/
+.container.jc{
+  background-color: aliceblue;
+  max-width: 80%;
+  height: 500px;
+
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+
+  justify-content: stretch;
+  /* justify-content: start; */
+  /* justify-content: center; */
+  /* justify-content: end; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  /* justify-content: space-evenly; */
+}
+
+/* Align Content */
+/* 
+Mengatur posisi seluruh cell pada grid secara vertikal jika ukuran seluruh cell tersebut 
+lebih kecil dari container pembungkusnya 
+
+Memiliki value yang sama dan fungsi yang mirip dengan justify-content
+*/
+
+
+/* Shorthand penulisan justify-contents dan align-items */
+/* 
+place-content: <justify-content> <align-content>;
+*/

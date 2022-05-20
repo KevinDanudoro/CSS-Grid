@@ -1,0 +1,53 @@
+/* 
+auto-fill dan auto-fit berfungsi layaknya flex wrap yang akan membuat baris baru 
+semisal conteiner tidak muat
+*/
+
+
+h1{
+  text-align: center;
+}
+
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue ;
+}
+
+.item:nth-child(2n){
+  background-color: lightcoral;
+}
+
+.container{
+  width: 60%;
+  height: 50vh;
+  border: 10px solid orange;
+
+  margin: 150px auto;
+
+  /* atur display container menjadi grid */
+  display: grid;
+}
+
+/* 
+Terlihat jelas perbedaan normal grid dengan auto fill dan auto fit. Namun cukup sulit melihat
+perbedaan antara auto-fill dengan auto-fit. 
+
+Perbedaan kedua keyword tersebut terletak pada ukuran explisit grid. 
+(Gunakan grid inspector pada inspect element)
+1. auto-fill akan mengatur ukuran explisit grid lebih besar jika terdapat ruang yang cukup 
+  untuk diisi elemen tersebut
+
+2. Sedangkan auto-fit akan mengatur ukuran explisit grid sesuai dengan elemen terakhir 
+  pada container
+*/
+.normal{
+  grid-template-columns: repeat(6, 100px);
+}
+.fill{
+  grid-template-columns: repeat(auto-fill, 100px) ;
+}
+.fit{
+  grid-template-columns: repeat(auto-fit, 100px) ;
+}

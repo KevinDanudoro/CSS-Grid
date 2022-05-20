@@ -1,0 +1,48 @@
+/* 
+grid-template-columns / grid-templte-rows
+
+Mendefiniskan "kolom / Baris" dengan cara menuliskan nilai dipisahkan oleh spasi. 
+Nilai merepresentasikan ukuran grid track dan spasi merepresentasikan grid line
+*/
+
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue ;
+}
+
+.item:nth-child(2n){
+  background-color: lightcoral;
+}
+
+.container{
+  width: 50%;
+  margin: 50px auto;
+  display: grid;
+
+  /* 
+  nilai pada masing2 properties di bawah mengatur tinggi dan lebar dari cell sekaligus mengatur 
+  jumlah baris dan kolom yang diinginkan
+  */
+
+  /* untuk menambahkan jumlah kolom menjadi 4, tambahkan nilai seperti bawah ini (tidak harus persis) */
+  /* grid-template-columns: 25% auto 50px 100px; */
+
+  grid-template-columns: 25% auto 50px;
+  /* 
+  Kode di atas akan menghasilkan 3 kolom dengan lebar masing-masing :
+  Kolom 1 : 25%   ->  25% width dari ukuran parentnya / pembungkusnya
+  Kolom 2 : auto  ->  Memenuhi width parent yang tidak dijadikan kolom (sisa)
+  Kolom 3 : 50px  ->  Lebar kolom sebesar 50px
+  */
+
+  grid-template-rows: 50px 100px auto;
+  /* 
+  Kode di atas akan menghasilkan 3 baris dengan tinggi masing-masing :
+  Baris 1 : 50px   ->  Tinggi baris sebesar 50px
+  Baris 2 : 100px  ->  Tinggi baris sebesar 100px
+  Baris 3 : auto   ->  Memenuhi height parent yang tidak dijadikan baris (sisa)
+  */
+
+}
